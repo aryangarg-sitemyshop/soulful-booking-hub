@@ -6,19 +6,22 @@ import { Users, Heart, Shield, Building2, Award, Target } from "lucide-react";
 import clinicImage from "@/assets/clinic-interior.jpg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const About = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main className="pt-20">
-        {/* Hero */}
-        <section className="section-padding gradient-rose-subtle">
-          <div className="container mx-auto text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <span className="section-label">About Us</span>
-              <h1 className="section-heading mt-3 mb-6">Our Story & Mission</h1>
-              <p className="section-subheading mx-auto">
+        {/* Hero with cover image */}
+        <section className="relative h-[40vh] min-h-[280px] overflow-hidden">
+          <img src={heroAbout} alt="Radiance Clinic waiting area" className="w-full h-full object-cover" width={1920} height={640} />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center">
+              <span className="section-label text-white/90">About Us</span>
+              <h1 className="section-heading mt-3 mb-4 text-white">Our Story & Mission</h1>
+              <p className="text-lg font-body text-white/80 max-w-xl mx-auto">
                 Radiance Skin Clinic is where cutting-edge dermatological science meets compassionate, personalized care.
               </p>
             </motion.div>
