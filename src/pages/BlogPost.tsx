@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowLeft, ArrowRight, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
-import ReactMarkdown from "react-markdown";
+
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
