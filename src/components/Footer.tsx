@@ -56,9 +56,11 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />
                 123 Skin Care Road, New Delhi, India - 110001
               </li>
-              <li className="flex items-center gap-3 text-sm font-body text-primary-foreground/70">
-                <Phone className="w-4 h-4 text-primary shrink-0" />
-                +91 123 456 7890
+              <li>
+                <a href="tel:+911234567890" className="flex items-center gap-3 text-sm font-body text-primary-foreground/70 hover:text-primary transition-colors">
+                  <Phone className="w-4 h-4 text-primary shrink-0" />
+                  +91 123 456 7890
+                </a>
               </li>
               <li className="flex items-center gap-3 text-sm font-body text-primary-foreground/70">
                 <Mail className="w-4 h-4 text-primary shrink-0" />

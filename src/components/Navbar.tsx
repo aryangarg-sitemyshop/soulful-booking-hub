@@ -77,6 +77,9 @@ const Navbar = () => {
             className="lg:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
+              <a href="tel:+911234567890" className="py-2 text-sm font-body font-medium text-muted-foreground flex items-center gap-2">
+                <Phone className="w-4 h-4" /> +91 123 456 7890
+              </a>
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
