@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { motion } from "framer-motion";
 import { Sparkles, Scissors, Dumbbell, Syringe, Zap, Eye, Droplets, Sun } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useBooking } from "@/contexts/BookingContext";
 import heroServices from "@/assets/hero-services.jpg";
 
 const allServices = [

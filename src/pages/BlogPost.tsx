@@ -5,6 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowLeft, ArrowRight, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useBooking } from "@/contexts/BookingContext";
 import { blogPosts } from "@/data/blogPosts";
 
 
