@@ -10,6 +10,7 @@ import { blogPosts } from "@/data/blogPosts";
 
 
 const BlogPost = () => {
+  const { openBooking } = useBooking();
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
 
