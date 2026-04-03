@@ -102,11 +102,7 @@ const BlogPost = () => {
             <div className="mt-12 p-8 rounded-2xl gradient-rose-subtle text-center">
               <h3 className="text-xl font-heading font-bold text-foreground mb-2">Ready to Begin Your Journey?</h3>
               <p className="font-body text-muted-foreground mb-6">Book a personalised consultation with our expert dermatologists today.</p>
-              <Link to="/contact">
-                <Button size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-10">
-                  Book a Consultation
-                </Button>
-              </Link>
+              <BlogBookButton />
             </div>
 
             {/* Back */}

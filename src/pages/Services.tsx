@@ -70,11 +70,7 @@ const Services = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/contact">
-                <Button size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-10 py-6 text-base">
-                  Book a Consultation
-                </Button>
-              </Link>
+              <BookButton />
             </div>
           </div>
         </section>
