@@ -21,7 +21,6 @@ const allServices = [
 const Services = () => {
   const { openBooking } = useBooking();
   return (
-  return (
     <div className="min-h-screen">
       <Navbar />
       <main className="pt-20">
