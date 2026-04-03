@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { motion } from "framer-motion";
 import { Sparkles, Scissors, Dumbbell, Syringe, Zap, Eye, Droplets, Sun } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useBooking } from "@/contexts/BookingContext";
 import heroServices from "@/assets/hero-services.jpg";
 
 const allServices = [
@@ -19,6 +19,7 @@ const allServices = [
 ];
 
 const Services = () => {
+  const { openBooking } = useBooking();
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -70,11 +71,9 @@ const Services = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/contact">
-                <Button size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-10 py-6 text-base">
-                  Book a Consultation
-                </Button>
-              </Link>
+              <Button onClick={openBooking} size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-10 py-6 text-base">
+                Book a Consultation
+              </Button>
             </div>
           </div>
         </section>

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { useBooking } from "@/contexts/BookingContext";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -15,6 +16,7 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { openBooking } = useBooking();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
@@ -50,11 +52,9 @@ const Navbar = () => {
             <Phone className="w-4 h-4" />
             +91 123 456 7890
           </a>
-          <Link to="/contact">
-            <Button className="gradient-rose text-primary-foreground font-body font-semibold px-6">
-              Book Appointment
-            </Button>
-          </Link>
+          <Button onClick={openBooking} className="gradient-rose text-primary-foreground font-body font-semibold px-6">
+            Book Appointment
+          </Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -94,11 +94,9 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/contact" onClick={() => setOpen(false)}>
-                <Button className="w-full gradient-rose text-primary-foreground font-body font-semibold mt-2">
-                  Book Appointment
-                </Button>
-              </Link>
+              <Button onClick={() => { setOpen(false); openBooking(); }} className="w-full gradient-rose text-primary-foreground font-body font-semibold mt-2">
+                Book Appointment
+              </Button>
             </div>
           </motion.div>
         )}

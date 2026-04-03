@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useBooking } from "@/contexts/BookingContext";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-clinic.jpg";
 
 const HeroSection = () => {
+  const { openBooking } = useBooking();
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
@@ -37,11 +39,9 @@ const HeroSection = () => {
             Advanced aesthetic & laser treatments with cutting-edge technology and a team of expert dermatologists.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-8 py-6 text-base">
-                Book Appointment
-              </Button>
-            </Link>
+            <Button onClick={openBooking} size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-8 py-6 text-base">
+              Book Appointment
+            </Button>
             <Link to="/services">
               <Button
                 size="lg"
