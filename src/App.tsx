@@ -11,6 +11,13 @@ import Contact from "./pages/Contact.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import AdminLogin from "./pages/AdminLogin.tsx";
+import AdminLayout from "./components/admin/AdminLayout.tsx";
+import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
+import AdminAppointments from "./pages/admin/AdminAppointments.tsx";
+import AdminPatients from "./pages/admin/AdminPatients.tsx";
+import AdminDoctors from "./pages/admin/AdminDoctors.tsx";
+import AdminBlogCMS from "./pages/admin/AdminBlogCMS.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +35,14 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="appointments" element={<AdminAppointments />} />
+              <Route path="patients" element={<AdminPatients />} />
+              <Route path="doctors" element={<AdminDoctors />} />
+              <Route path="blog" element={<AdminBlogCMS />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BookingProvider>
