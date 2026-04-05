@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useBooking } from "@/contexts/BookingContext";
 import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-clinic.jpg";
 
 const HeroSection = () => {
@@ -40,13 +41,23 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button onClick={openBooking} size="lg" className="gradient-rose text-primary-foreground font-body font-semibold px-8 py-6 text-base">
-              Book Appointment
+              Book Now
             </Button>
+            <a href="tel:+911234567890">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-body px-8 py-6 text-base flex items-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </Button>
+            </a>
             <Link to="/services">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-body px-8 py-6 text-base"
+                className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-body px-8 py-6 text-base"
               >
                 Our Services
               </Button>
