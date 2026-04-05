@@ -53,15 +53,6 @@ const HeroSection = () => {
                 Call Now
               </Button>
             </a>
-            <Link to="/services">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-body px-8 py-6 text-base"
-              >
-                Our Services
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </div>
