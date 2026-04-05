@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useBooking } from "@/contexts/BookingContext";
 import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
+import heroImage from "@/assets/hero-clinic.jpg";
 import heroImage from "@/assets/hero-clinic.jpg";
 
 const HeroSection = () => {
